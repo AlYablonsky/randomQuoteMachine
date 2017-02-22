@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Project #3 Random Quote Machine</title>
+        <meta name="description" content="Random Quote Machine Project">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+        <link rel="stylesheet" href="randomQuoteMachine.css">     
+<!-- 
+Comments: Random quote generator
+-->    
+    </head>
+    <body class="container-fluid">
+        <h1 id="titleStyle">Random Quote Generator</h1>
+        <div id="surroundings">  <!-- Background for image file -->
+            <div id="quoteBox">       <!-- quoteBox div contains box for quote and author -->
+        
+                <span id="quote"></span><br>  <!-- Receive new quote -->
+        
+    
+                <span id="author"></span><br><br><br><br><br><br>  <!-- Receive Author's name  -->
+                <!--end of quoteBox div encloses author and quote -->
+        
+                <div id="buttonBox">    <!--buttonBox div encloses "get quote" and "tweet" buttons only -->
+            
+                    <button class="btn btn-default" type="submit" id="newQuote">Get Quote</button>  <!-- Buttons for get quote -->
+                    <a href="#"><button class="btn btn-default" id="tweet"><i class="fa fa-twitter"></i>Tweet Quote</button></a>  <!--Tweet button -->
+                            
+                </div>  <!-- buttonBox div -->
+            </div>
+        </div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+        <script src="randomQuoteMachine.js"></script> 
+    </body>
+</html>

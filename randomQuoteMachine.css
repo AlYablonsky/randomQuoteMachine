@@ -1,0 +1,158 @@
+
+body {
+    color: white;
+    text-align: center;
+    background-color:  black;  
+    
+    /*  Used for colored transitions  */
+    -webkit-transition: background-color 1000ms linear;
+    -moz-transition: background-color 1000ms linear;
+    -o-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+    
+}
+
+/* Styles the box area in which the "Quote" and its author appear */
+#quoteBox {
+    background-color: white;
+    color black;
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    border: 1px solid white;
+    padding-top: 40px;
+    height:auto;    /* was 700px */
+    border-radius: 25% 25% 25% 25%;
+    
+}
+
+/* Reduce area between bottom of quote and the "get quote" and "tweet buttons" */
+#buttonBox {
+    
+    margin-top: -50px;   
+}
+
+/*This styles the random quote */
+#quote {
+    font-size: 2.5em;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 100px;
+    padding-right: 100px;
+    -webkit-transition: color 1000ms linear;
+    -moz-transition: color 1000ms linear;
+    -o-transition: color 1000ms linear;
+    -ms-transition: color 1000ms linear;
+    transition: color 1000ms linear;
+    margin-bottom: 300px;
+    padding-bottom: 300px;
+        
+/* This styles the author's name */    
+}
+#author {
+    font-size: 1.5em;
+    font-style: oblique;
+    font-family: 'Arial', sans-serif;
+    color: black;
+    padding-right: 100px;
+    float: right;
+    -webkit-transition: color 1000ms linear;
+    -moz-transition: color 1000ms linear;
+    -o-transition: color 1000ms linear;
+    -ms-transition: color 1000ms linear;
+    transition: color 1000ms linear;
+
+
+}
+
+/* Styles the buttons */
+.btn {
+        
+    background-color: black;
+    color: white;
+    -webkit-transition: background-color 1000ms linear;
+    -moz-transition: background-color 1000ms linear;
+    -o-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 25px;
+    width: 160px;
+    height: 35px;
+    font-weight: 800;
+}
+.btn:link {
+    background-color: black;
+    color: white;
+}
+.btn:visited {
+    background-color: black;
+    color: white;
+}
+
+.btn:focus {
+    background-color: black;
+    color: white;
+}
+.btn:hover {
+    background-color: black;
+    color: white;
+}
+.btn:active {
+    background-color: black;
+    color: white !important;
+    
+}
+
+/* Styles the tweet icon */
+.fa-twitter {
+    margin: -50px 12px 10px -5px;
+    font-size: 1.8em;
+}
+
+
+/*Styles the tweet button */
+#tweet {
+    padding-right: 35px;
+}
+
+
+/* Styles the "New Quote button" */
+#newQuote{
+}
+
+/* Styles the title */
+#titleStyle {
+    
+    font-size: 6em;
+    font-family: 'Lobster', sans-serif;
+    margin-top: 60px;
+    margin-bottom: 50px;   
+}
+
+/* This styles the "surroundings" div in the middle of the page which is combined with a background image through the "background-blend-mode" using a difference mode */
+#surroundings {
+    padding: 100px;
+    -webkit-transition: background-color 1000ms linear;
+    -moz-transition: background-color 1000ms linear;
+    -o-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+    background-image: url("http://polytopia.net/random-quote-backgroung.jpg"); 
+    background-color: rgba(255,255,255,0.65);
+    background-blend-mode:difference;
+}
+
+
+
+
+
+
+
+
