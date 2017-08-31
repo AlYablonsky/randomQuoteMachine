@@ -1,21 +1,7 @@
 $(document).ready(function () {
 
-  
-	randomQuoteMachineNameSpace = function(){
-	    var randomQuote, randomAuthor;
-	    function getRandomQuote(){return randomQuote;}
-	    function getRandomAuthor(){return randomAuthor;}
-	    function setRandomQuote(quoteValue){randomQuote = quoteValue;}
-	    function setRandomAuthor(authorValue){randomAuthor =authorValue;}
-	    return {
-		    getRandomQuote:getRandomQuote,
-		    getRandomAuthor:getRandomAuthor,
-		    setRandomQuote:setRandomQuote,
-		    setRandomAuthor:setRandomAuthor
-	    }
-	}();
-	
-    
+	var randomQuote, randomAuthor;
+      
 	
     function getQuote() {
    			
@@ -31,33 +17,26 @@ $(document).ready(function () {
             },
             
             success: function(response) {
-                var randomQuote1 = response.quoteText;     
-                var randomAuthor1 = response.quoteAuthor;
-                randomQuoteMachineNameSpace.setRandomQuote(randomQuote1);
-                randomQuoteMachineNameSpace.setRandomAuthor(randomAuthor1);
-				
-                $("#quote").text(randomQuote1);
-                if (randomAuthor1) {
-                    $("#author").html("- " + randomAuthor1);
+                      randomQuote = response.quoteText;     
+                      randomAuthor = response.quoteAuthor;
+                $("#quote").text(randomQuote);
+                if (randomAuthor) {
+                    $("#author").html("- " + randomAuthor);
                 } else {
                     $("#author").html("- unknown");     
                 }   
             }            
         }); 
-         
     };  
     
     $("#tweet").on("click",function(event) {
 		
-		 var randomQuote2 = randomQuoteMachineNameSpace.getRandomQuote();
-		 var randomAuthor2 = randomQuoteMachineNameSpace.getRandomAuthor();
-		
         event.preventDefault();
-            if (randomAuthor2) {
-                window.open("https://twitter.com/intent/tweet?text=" + randomQuote2 + " - " + randomAuthor2 );
+            if (randomAuthor) {
+                window.open('https://twitter.com/intent/tweet?text=' + '"' + randomQuote + '"' + '-' + randomAuthor );
             }
             else {
-                window.open("https://twitter.com/intent/tweet?text=" + randomQuote2 + " -unknown ");
+                window.open('https://twitter.com/intent/tweet?text=' + '"' + randomQuote + '"' + '-unknown');
             }
     });  
     
@@ -78,16 +57,12 @@ $(document).ready(function () {
         var randomColorOfSurroundings = 'rgba(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + 0.65 + ')';
         
         // Setting font color of quote and author expression, background color of the body, "newquote" and "tweet" button
-        document.body.style.backgroundColor = randomColorOfQuote;
-        document.getElementById("quote").style.color = randomColorOfQuote;
-        document.getElementById("author").style.color = randomColorOfQuote;
-    
-        
-       
-            $(".btn").css({"background-color" : randomColorOfQuote});
 
-        
-        document.getElementById("surroundings").style.backgroundColor = randomColorOfSurroundings;
-        
+         $("body").css("backgroundColor", randomColorOfQuote);
+         $("#quote").css("color", randomColorOfQuote);
+         $("#author").css("color", randomColorOfQuote);
+         $(".btn").css("background-color", randomColorOfQuote);
+         $("#surroundings").css("backgroundColor", randomColorOfSurroundings);
+
     });   
 });  
